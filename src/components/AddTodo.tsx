@@ -7,6 +7,7 @@ export function AddTodo() {
   const [content, setContent] = useState<Omit<TodoContent, "id">>({
     description: "",
     title: "",
+    completed: false,
   });
   const handleChange: ChangeEventHandler<HTMLInputElement> = (e) =>
     setContent((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -18,6 +19,7 @@ export function AddTodo() {
     setContent({
       description: "",
       title: "",
+      completed: false,
     });
   };
   return (
