@@ -6,6 +6,10 @@ export const todoContentState = atom<TodoContent[]>({
 	default: [],
 });
 
+// While keeping all the elements as objects in the element list atom,
+// if one element’s position would change, all the elements would be re-rendered.
+// But by using atomFamily, we only re-render the one element that changed.
+
 export const todoCompleteState = atomFamily<boolean, string>({
 	key: "todoCompleteState",
 	default: false,
