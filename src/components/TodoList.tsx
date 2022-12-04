@@ -1,6 +1,6 @@
-import { useRecoilValue } from 'recoil';
-import { todoContentState } from '../state/todoState';
-import { TodoItem } from './TodoItem';
+import { useRecoilValue } from "recoil";
+import { todoContentState } from "../state/todoState";
+import { TodoItem } from "./TodoItem";
 export function TodoList() {
 	const todoList = useRecoilValue(todoContentState);
 	return (
