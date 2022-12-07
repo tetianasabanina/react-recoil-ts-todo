@@ -10,11 +10,12 @@ import { Home } from "./pages";
 import { Login } from "./pages";
 
 import "./App.css";
+import { Datepicker } from "./components/Datepicker";
 
 const App = () => {
-	return (
-		<div>
-			<BrowserRouter history={history}>
+  return (
+    <div>
+      {/* <BrowserRouter history={history}>
 				<Nav />
 				<div className="container pt-4 pb-4">
 					<Routes>
@@ -24,11 +25,12 @@ const App = () => {
 						<Navigate to="/" />
 					</Routes>
 				</div>
-			</BrowserRouter>
-			<TodoStatus />
-			<AddTodo />
-			<TodoList />
-		</div>
-	);
+			</BrowserRouter> */}
+      <TodoStatus />
+      <AddTodo />
+      <TodoList />
+      <Datepicker />
+    </div>
+  );
 };
 export default App;
